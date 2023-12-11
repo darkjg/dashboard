@@ -1,17 +1,17 @@
+//endpoint para recoger el clima de ahora
 //https://api.weatherapi.com/v1/current.json?key=dc5cb9c0af574e3f832104604230712&q=cangas&aqi=yes
-
+//endpoint para recoger el clima de todo el dia
 //https://api.weatherapi.com/v1/history.json?key=dc5cb9c0af574e3f832104604230712&q=cangas&dt=2024-01-06
 
 
 let d = new Date();
-
 let hoyWheather = `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
 const weatherapi = document.getElementById("wheater");
 const getClima = async () => {
     let datos = []
     try {
-        const response = await fetch("https://api.weatherapi.com/v1/current.json?key=dc5cb9c0af574e3f832104604230712&q=cangas&aqi=yes ");
-        const response2 = await fetch(`https://api.weatherapi.com/v1/history.json?key=dc5cb9c0af574e3f832104604230712&q=cangas&dt=${hoyWheather}`);
+        const response = await fetch("https://api.weatherapi.com/v1/current.json?key="+apikey+"&q=cangas&aqi=yes ");
+        const response2 = await fetch(`https://api.weatherapi.com/v1/history.json?key=${apikey}&q=cangas&dt=${hoyWheather}`);
         if (!response && !response2) {
             throw new Error("Error");
         } else {
@@ -26,7 +26,7 @@ const getClima = async () => {
     }
 }
 
-const templateWeather = (datos) => {
+const templateWeatherIndex = (datos) => {
    
 
     const location = datos[1]["location"];
@@ -40,7 +40,7 @@ const templateWeather = (datos) => {
                                 </div>
                                 <div class=imagen>
                                         <img src="${current["condition"]["icon"]}"
-                                        <p>Temeratura:${current["temp_c"]}º
+                                        <p>Temperatura:${current["temp_c"]}º
                                 </div>
                             </div>
                                 <div class="lista" id="lista">
@@ -62,5 +62,5 @@ const templateWeather = (datos) => {
 
 
 }
-getClima().then((data => templateWeather(data)))
+getClima().then((data => templateWeatherIndex(data)))
 

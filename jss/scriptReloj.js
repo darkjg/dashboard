@@ -1,6 +1,4 @@
 const reloj= document.getElementById("reloj");
-
-
 let intervalID = setInterval(actualizar, 500);
 
 function actualizar(){
