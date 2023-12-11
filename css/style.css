@@ -1,0 +1,37 @@
+.wheater {
+    border: black solid;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-self: flex-end;
+}
+
+.hoy {
+    display: flex;
+    justify-content:space-around;
+    border-bottom: black solid;
+    
+}
+
+.datos{
+    padding-right: 5%;
+    border-right: black solid;
+}
+.imagen{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    
+    
+}
+
+.lista {
+    display: flex;
+    overflow: auto;
+    gap: 2%;
+    
+    
+}
+body{
+    background-color: #04293A;
+}

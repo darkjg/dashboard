@@ -1,0 +1,66 @@
+//https://api.weatherapi.com/v1/current.json?key=dc5cb9c0af574e3f832104604230712&q=cangas&aqi=yes
+
+//https://api.weatherapi.com/v1/history.json?key=dc5cb9c0af574e3f832104604230712&q=cangas&dt=2024-01-06
+
+
+let d = new Date();
+
+let hoyWheather = `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
+const weatherapi = document.getElementById("wheater");
+const getClima = async () => {
+    let datos = []
+    try {
+        const response = await fetch("https://api.weatherapi.com/v1/current.json?key=dc5cb9c0af574e3f832104604230712&q=cangas&aqi=yes ");
+        const response2 = await fetch(`https://api.weatherapi.com/v1/history.json?key=dc5cb9c0af574e3f832104604230712&q=cangas&dt=${hoyWheather}`);
+        if (!response && !response2) {
+            throw new Error("Error");
+        } else {
+            const data = await response.json();
+            const data2 = await response2.json();
+            datos.unshift(data);
+            datos.unshift(data2["forecast"]["forecastday"][0]["hour"]);
+            return datos;
+        }
+    } catch (error) {
+        console.log("Errror al obtener")
+    }
+}
+
+const templateWeather = (datos) => {
+   
+
+    const location = datos[1]["location"];
+    const current = datos[1]["current"]
+
+    weatherapi.innerHTML = `<div class="hoy">
+                                <div class="datos">
+                                        <p>Lugar:${location["name"]}</p>
+                                        <p>Region:${location["region"]}</p>
+                                        <p>Pais:${location["country"]}</p>
+                                </div>
+                                <div class=imagen>
+                                        <img src="${current["condition"]["icon"]}"
+                                        <p>Temeratura:${current["temp_c"]}º
+                                </div>
+                            </div>
+                                <div class="lista" id="lista">
+                            </div>
+                            `;
+    const lista = document.getElementById("lista");
+
+    datos[0].forEach(dato => {
+        let fecha = dato["time"];
+        const d = new Date(fecha);
+        let horas = ("0" + d.getHours()).slice(-2);
+        let mins = ("0" + d.getMinutes()).slice(-2);
+        lista.innerHTML += `<div class="datoLista">
+                                <img src="${dato["condition"]["icon"]}"
+                                <p>hora:${horas}:${mins}</p>
+                                <p>Temp:${dato["temp_c"]}º</p>        
+                            </div>`;
+    });
+
+
+}
+getClima().then((data => templateWeather(data)))
+
