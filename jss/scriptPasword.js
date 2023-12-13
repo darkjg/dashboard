@@ -81,4 +81,4 @@ function templatePaswordIndex(){
 }
 
 
-//templatePaswordIndex();
+templatePaswordIndex();

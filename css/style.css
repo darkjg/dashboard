@@ -34,4 +34,13 @@
 }
 body{
     background-color: #04293A;
+    display: flex;
+    flex-direction: row;
+   
+    flex-wrap: wrap-reverse;
+}
+#conunto{
+    display: flex;   
+    align-items: flex-end;
+    flex-direction: column;
 }
