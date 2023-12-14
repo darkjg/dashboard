@@ -1,46 +1,113 @@
-.wheater {
+.caja {
     border: black solid;
+    border-radius: 25px;
+    background-color: rgba(82, 82, 82, 0.5);
+    padding: 1%;
+}
+
+.wheater {
     display: flex;
     flex-direction: column;
-    width: 25%;
+    width: 97%;
     align-self: flex-end;
 }
 
 .hoy {
     display: flex;
-    justify-content:space-around;
-    border-bottom: black solid;
-    
+    flex-direction: row;
+    flex-wrap: wrap;
+
 }
 
-.datos{
+.hoy .datos {
+    width: 25%;
+    border-bottom: black solid;
+}
+
+.hoy .imagen {
+    width: 65%;
+    border-bottom: black solid;
+}
+
+.grande {
+    font-size: 70px;
+    width: 50%
+}
+
+.datos {
     padding-right: 5%;
     border-right: black solid;
 }
-.imagen{
+
+.imagen {
     display: flex;
-    flex-direction: column;
-    align-items: end;
-    
-    
+    align-items: center;
+    font-size: 15px;
+}
+
+.imagen img {
+    width: 25%;
 }
 
 .lista {
     display: flex;
     overflow: auto;
     gap: 2%;
-    
-    
 }
-body{
+
+body {
     background-color: #04293A;
     display: flex;
     flex-direction: row;
-   
+
     flex-wrap: wrap-reverse;
 }
-#conunto{
-    display: flex;   
+
+#conunto {
+    display: flex;
     align-items: flex-end;
     flex-direction: column;
+}
+
+/* enlaces */
+#listaDeEnlaces {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    height: 500px;
+    padding: 20px;
+    overflow: scroll
+}
+
+#contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#contenedor>div {
+    width: 48%;
+}
+
+/* hora */
+#horaWidget {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+#horaWidget h3 {
+    font-size: 40px;
+    margin-bottom: 0px;
+}
+#horaWidget p {
+    font-size: 20px;
+}
+/* contraseña */
+.contra{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    font-size: 20px;
 }

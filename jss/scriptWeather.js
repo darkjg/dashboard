@@ -31,18 +31,25 @@ const templateWeatherIndex = (datos) => {
 
     const location = datos[1]["location"];
     const current = datos[1]["current"]
-
-    weatherapi.innerHTML = `<div class="hoy">
+    console.log(current)
+    weatherapi.innerHTML = `<section class="hoy">
                                 <div class="datos">
                                         <p>Lugar:${location["name"]}</p>
                                         <p>Region:${location["region"]}</p>
                                         <p>Pais:${location["country"]}</p>
                                 </div>
                                 <div class=imagen>
+                                    <div class=grande>
                                         <img src="${current["condition"]["icon"]}"
-                                        <p>Temperatura:${current["temp_c"]}º
+                                        <p>${current["temp_c"]}<img src="${"./img/celsius.png"}"</p>
+                                    </div>
+                                    <div>
+                                        <p>Precipitaciones:${current["precip_mm"]}%</p>
+                                        <p> Humedad:${current["humidity"]} % </p>
+                                        <p>Viento:${current["wind_kph"]}  Km/h</p>                                    
+                                    </div>
                                 </div>
-                            </div>
+                            </section>
                                 <div class="lista" id="lista">
                             </div>
                             `;
