@@ -18,7 +18,7 @@ templatePaswordIndex();
 function templatePaswordIndex() {
 
     contra.innerHTML += `<div><input type="number" id="numberContraseña" min="12" max="50" value=12 >
-                              <button type="button" id="generarContraseña" onclick="CrearContraseña()">Generar Contraseña</button>
+                              <button type="button" class="boton" id="generarContraseña" onclick="CrearContraseña()">Generar Contraseña</button>
                          </div>`
    
     contra.innerHTML += `<div id=contraseña></div>`

@@ -15,7 +15,7 @@ function templateEnlaces() {
     <form id="formenlace"> 
         <input id="nombrelink" type="text" placeholder="nombre de tu enlance"></input> 
             <input id="linkurl" type="text" placeholder="Pega aqui tu url"></input></div>
-            <input type="submit" id="submit" value="añadir enlace"></input>
+            <input type="submit" id="submit" class="boton" value="añadir enlace"></input>
     </form>
     <div id="lista">
         <ul id=listaDeEnlaces>

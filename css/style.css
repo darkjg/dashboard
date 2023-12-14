@@ -5,6 +5,26 @@
     padding: 1%;
 }
 
+body {
+    background-color: #04293A;
+    display: flex;
+    flex-direction: row;
+
+    flex-wrap: wrap-reverse;
+}
+
+
+
+
+.boton {
+    background-color: blue;
+    border-radius: 25px;
+    border: 0px;
+    height: 30px;
+    border-color: black;
+}
+
+/* wheater */
 .wheater {
     display: flex;
     flex-direction: column;
@@ -55,39 +75,11 @@
     gap: 2%;
 }
 
-body {
-    background-color: #04293A;
-    display: flex;
-    flex-direction: row;
 
-    flex-wrap: wrap-reverse;
-}
 
-#conunto {
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-}
 
-/* enlaces */
-#listaDeEnlaces {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    height: 500px;
-    padding: 20px;
-    overflow: scroll
-}
 
-#contenedor {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
 
-#contenedor>div {
-    width: 48%;
-}
 
 /* hora */
 #horaWidget {
@@ -96,18 +88,102 @@ body {
     align-content: center;
     flex-direction: column;
 }
+
 #horaWidget h3 {
     font-size: 40px;
     margin-bottom: 0px;
 }
+
 #horaWidget p {
     font-size: 20px;
 }
+
 /* contraseña */
-.contra{
+.contra {
     display: flex;
     align-items: center;
     align-content: center;
     flex-direction: column;
     font-size: 20px;
+}
+
+/* enlaces */
+
+#listaDeEnlaces {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    height: 300px;;
+    padding: 20px;
+    overflow: scroll;
+    list-style: none;
+
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+#listaDeEnlaces li{
+    height: 55.5px;
+}
+li a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 110px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: beige;
+
+}
+
+li button {
+    position: relative;
+    top: -50px;
+    left: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    color: black;
+    border: none;
+    border-radius: 50%;
+    font-size: 15px;
+    background-color: beige;
+    
+
+}
+
+.enlace {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.enlace input {
+    width: inherit;
+    font-size: 17px;
+}
+
+#lista {
+    width: inherit;
+}
+
+#introducion {
+    font-size: 30px;
+}
+#contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+#contenedor>div {
+    width: 48%;
+    
 }
