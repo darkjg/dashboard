@@ -1,15 +1,33 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-decoration: none;
+}
+
+header a {
+    display: flex;
+    text-decoration: none;
+    color: black;
+}
+
+header a img {
+    width: 10%;
+}
 .caja {
     border: black solid;
     border-radius: 25px;
     background-color: rgba(82, 82, 82, 0.5);
     padding: 1%;
+    align-items: center;
+  width: 50%;
 }
-
 body {
     background-color: #04293A;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap-reverse;
+    flex-direction: column;
+    align-content: center;
+  align-items: center;
 }
 
 
@@ -23,94 +41,13 @@ body {
     border-color: black;
 }
 
-/* wheater */
-.wheater {
-    display: flex;
-    flex-direction: column;
-    width: 97%;
-    align-self: flex-end;
-}
-
-.hoy {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
-}
-
-.hoy .datos {
-    width: 25%;
-    border-bottom: black solid;
-}
-
-.hoy .imagen {
-    width: 65%;
-    border-bottom: black solid;
-}
-
-.grande {
-    font-size: 70px;
-    width: 50%
-}
-
-.datos {
-    padding-right: 5%;
-    border-right: black solid;
-}
-
-.imagen {
-    display: flex;
-    align-items: center;
-    font-size: 15px;
-}
-
-.imagen img {
-    width: 25%;
-}
-
-.lista {
-    display: flex;
-    overflow: auto;
-    gap: 2%;
-}
-
-
-/* hora */
-#horaWidget {
-    display: flex;
-    align-items: center;
-    align-content: center;
-    flex-direction: column;
-}
-
-#horaWidget h3 {
-    font-size: 40px;
-    margin-bottom: 0px;
-}
-
-#horaWidget p {
-    font-size: 20px;
-}
-.ocultar{
-     display: none; 
-}
-
-/* contraseña */
-.contra {
-    display: flex;
-    align-items: center;
-    align-content: center;
-    flex-direction: column;
-    font-size: 20px;
-}
 
 /* enlaces */
-
 #listaDeEnlaces {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    height: 300px;;
+    height: 400px;;
     padding: 20px;
     overflow: scroll;
     list-style: none;
@@ -156,7 +93,7 @@ li button {
 
 .enlace {
     display: flex;
-    align-items: center;
+   
     align-content: center;
     flex-direction: column;
 }

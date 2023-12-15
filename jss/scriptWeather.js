@@ -31,7 +31,7 @@ const templateWeatherIndex = (datos) => {
 
     const location = datos[1]["location"];
     const current = datos[1]["current"]
-    console.log(current)
+   // console.log(current)
     weatherapi.innerHTML = `<section class="hoy">
                                 <div class="datos">
                                         <p>Lugar:${location["name"]}</p>
@@ -41,7 +41,7 @@ const templateWeatherIndex = (datos) => {
                                 <div class=imagen>
                                     <div class=grande>
                                         <img src="${current["condition"]["icon"]}"
-                                        <p>${current["temp_c"]}<img src="${"./img/celsius.png"}"</p>
+                                        <p>${current["temp_c"]}<img src="${"../img/celsius.png"}"</p>
                                     </div>
                                     <div>
                                         <p>Precipitaciones:${current["precip_mm"]}%</p>

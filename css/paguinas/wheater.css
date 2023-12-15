@@ -1,0 +1,110 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-decoration: none;
+}
+
+header a {
+    display: flex;
+    text-decoration: none;
+    color: black;
+}
+
+header a img {
+    width: 10%;
+}
+
+.caja {
+    border: black solid;
+    border-radius: 25px;
+    background-color: rgba(82, 82, 82, 0.5);
+    padding: 1%;
+    align-items: center;
+
+}
+
+body {
+    background-color: #04293A;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    padding-top: 130px;
+}
+
+.wheater {
+    display: flex;
+    flex-direction: column;
+    width: 97%;
+    align-self: flex-end;
+}
+
+.hoy {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.hoy .datos {
+    width: 25%;
+    border-bottom: black solid;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hoy .imagen {
+    width: 30%;
+    border-bottom: black solid;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-right: 364px;
+    padding-left: 365px;
+
+}
+
+.grande {
+    font-size: 70px;
+    width: 50%
+}
+
+.datos {
+    padding-right: 5%;
+    border-right: black solid;
+}
+
+.imagen {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.imagen img {
+    width: 25%;
+}
+
+.lista {
+    display: flex;
+    overflow: auto;
+    gap: 2%;
+}
+
+
+/* footer */
+.footer {
+
+    position: absolute;
+    bottom: 4%;
+    right: 0;
+    width: 50%;
+    border-bottom: black solid 2px;
+}
+
+nav a {
+    padding: 2%;
+}
