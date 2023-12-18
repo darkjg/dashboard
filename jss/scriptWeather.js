@@ -7,11 +7,13 @@
 let d = new Date();
 let hoyWheather = `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
 const weatherapi = document.getElementById("wheater");
+
 const getClima = async () => {
     let datos = []
     try {
-        const response = await fetch("https://api.weatherapi.com/v1/current.json?key="+apikey+"&q=cangas&aqi=yes ");
-        const response2 = await fetch(`https://api.weatherapi.com/v1/history.json?key=${apikey}&q=cangas&dt=${hoyWheather}`);
+      
+        const response = await fetch("https://api.weatherapi.com/v1/current.json?key="+apikey+"&q="+Lugar+"&aqi=yes ");
+        const response2 = await fetch(`https://api.weatherapi.com/v1/history.json?key=${apikey}&q=${Lugar}&dt=${hoyWheather}`);
         if (!response && !response2) {
             throw new Error("Error");
         } else {
@@ -31,7 +33,7 @@ const templateWeatherIndex = (datos) => {
 
     const location = datos[1]["location"];
     const current = datos[1]["current"]
-   // console.log(current)
+  
     weatherapi.innerHTML = `<section class="hoy">
                                 <div class="datos">
                                         <p>Lugar:${location["name"]}</p>
@@ -69,5 +71,6 @@ const templateWeatherIndex = (datos) => {
 
 
 }
-getClima().then((data => templateWeatherIndex(data)))
+
+//getClima().then((data => templateWeatherIndex(data)))
 
