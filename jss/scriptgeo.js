@@ -28,7 +28,7 @@ async function obtenerPosicion() {
 }
 
 
-//obtenerPosicion()
+obtenerPosicion()
 
 
 
