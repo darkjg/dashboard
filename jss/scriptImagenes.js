@@ -5,7 +5,7 @@ let carpeta = "../img/ImagenesAleatorias";
 let arrayImagenes=["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg"]
 function CambiarImagen(){
 
-    if(window.location.href=="https://darkjg.github.io/dashboard/index.html"){
+    if(window.location.href=="https://darkjg.github.io/dashboard/index.html ||https://darkjg.github.io/dashboard/"){
         console.log("Entro" );
         carpeta = "img/ImagenesAleatorias";
     }
