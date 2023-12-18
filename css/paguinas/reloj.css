@@ -5,15 +5,20 @@ header {
     text-decoration: none;
 }
 
+body {
+    color: white;
+}
+
 header a {
     display: flex;
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 header a img {
     width: 10%;
 }
+
 .caja {
     border: black solid;
     border-radius: 25px;
@@ -49,14 +54,15 @@ body {
 }
 
 /* footer */
-.footer{
-   
+.footer {
+
     position: absolute;
     bottom: 4%;
     right: 0;
     width: 50%;
     border-bottom: black solid 2px;
 }
-nav a{
+
+nav a {
     padding: 2%;
 }

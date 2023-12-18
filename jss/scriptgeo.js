@@ -1,7 +1,7 @@
 let geo = "https://api.bigdatacloud.net/data/reverse-geocode-client";
 let navi = navigator.geolocation
 //'https://nominatim.openstreetmap.org/reverse?lat=41.63125237270472&lon=-4.742565007934635&format=json';
-let Lugar = "Cangas"
+let Lugar = ""
 
 getClima().then((data => templateWeatherIndex(data)))
 async function obtenerPosicion() {

@@ -3,12 +3,15 @@ header {
     top: 0;
     left: 0;
     text-decoration: none;
+  
 }
-
+body{
+    color: white;
+}
 header a {
     display: flex;
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 header a img {

@@ -43,7 +43,7 @@ const templateWeatherIndex = (datos) => {
                                 <div class=imagen>
                                     <div class=grande>
                                         <img src="${current["condition"]["icon"]}"
-                                        <p>${current["temp_c"]}<img src="${"./img/celsius.png"}"</p>
+                                        <p>${current["temp_c"]}<img src="${"/img/celsius.png"}"</p>
                                     </div>
                                     <div>
                                         <p>Precipitaciones:${current["precip_mm"]}%</p>
@@ -63,9 +63,9 @@ const templateWeatherIndex = (datos) => {
         let horas = ("0" + d.getHours()).slice(-2);
         let mins = ("0" + d.getMinutes()).slice(-2);
         lista.innerHTML += `<div class="datoLista">
-                                <img src="${dato["condition"]["icon"]}"
-                                <p>hora:${horas}:${mins}</p>
-                                <p>Temp:${dato["temp_c"]}º</p>        
+                                <img src="${dato["condition"]["icon"]}"/>
+                                <p>${horas}:${mins}</p>
+                                <p>${dato["temp_c"]}º</p>        
                             </div>`;
     });
 

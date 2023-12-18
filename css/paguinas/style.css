@@ -1,3 +1,4 @@
+
 .caja {
     border: black solid;
     border-radius: 25px;
@@ -10,6 +11,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap-reverse;
+    color: white;
 }
 
 
@@ -41,6 +43,7 @@ body {
 .hoy .datos {
     width: 25%;
     border-bottom: black solid;
+    padding-left: 15px;
 }
 
 .hoy .imagen {
@@ -73,7 +76,13 @@ body {
     overflow: auto;
     gap: 2%;
 }
+.datoLista{
+    display: flex;
+    align-content: center;
+    align-items: center;
 
+    flex-direction: column;
+}
 
 /* hora */
 #horaWidget {
