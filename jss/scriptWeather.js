@@ -34,8 +34,10 @@ const templateWeatherIndex = (datos) => {
     try {
       
         if(window.location.href=="https://darkjg.github.io/dashboard/index.html"|| window.location.href=="https://darkjg.github.io/dashboard/"){
+            console.log("Entro",window.location.href)
             imgCelsius = "img/celsius.png";
         }else {
+            console.log("no Entro",window.location.href)
             imgCelsius = "../img/celsius.png";
         }
 
