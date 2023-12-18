@@ -11,17 +11,18 @@ const weatherapi = document.getElementById("wheater");
 const getClima = async () => {
     let datos = []
     try {
-
-        const response = await fetch("https://api.weatherapi.com/v1/current.json?key=" + apikey + "&q=" + Lugar + "&aqi=yes ");
-        const response2 = await fetch(`https://api.weatherapi.com/v1/history.json?key=${apikey}&q=${Lugar}&dt=${hoyWheather}`);
-        if (!response && !response2) {
-            throw new Error("Error");
-        } else {
-            const data = await response.json();
-            const data2 = await response2.json();
-            datos.unshift(data);
-            datos.unshift(data2["forecast"]["forecastday"][0]["hour"]);
-            return datos;
+        if (Lugar != null) {
+            const response = await fetch("https://api.weatherapi.com/v1/current.json?key=" + apikey + "&q=" + Lugar + "&aqi=yes ");
+            const response2 = await fetch(`https://api.weatherapi.com/v1/history.json?key=${apikey}&q=${Lugar}&dt=${hoyWheather}`);
+            if (!response && !response2) {
+                throw new Error("Error");
+            } else {
+                const data = await response.json();
+                const data2 = await response2.json();
+                datos.unshift(data);
+                datos.unshift(data2["forecast"]["forecastday"][0]["hour"]);
+                return datos;
+            }
         }
     } catch (error) {
         console.log("Errror al obtener")
@@ -45,7 +46,7 @@ const templateWeatherIndex = (datos) => {
                                 <div class=imagen>
                                     <div class=grande>
                                         <img src="${current["condition"]["icon"]}"
-                                        <p>${current["temp_c"]}<img src="${"/img/celsius.png"}"</p>
+                                        <p>${current["temp_c"]}<img src="${"../img/celsius.png"}"</p>
                                     </div>
                                     <div>
                                         <p>Precipitaciones:${current["precip_mm"]}%</p>
