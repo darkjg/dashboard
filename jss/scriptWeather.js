@@ -32,7 +32,7 @@ const getClima = async () => {
 const templateWeatherIndex = (datos) => {
     let imgCelsius;
     try {
-        console.log('URL actual:', window.location.href);
+      
         if(window.location.href=="https://darkjg.github.io/dashboard/index.html"){
             imgCelsius = "img/celsius.png";
         }else {

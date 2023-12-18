@@ -6,6 +6,7 @@ let arrayImagenes=["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jp
 function CambiarImagen(){
 
     if(window.location.href=="https://darkjg.github.io/dashboard/index.html"){
+        console.log("Entro" );
         carpeta = "img/ImagenesAleatorias";
     }
     let valorImagen= Math.floor(Math.random() * (arrayImagenes.length - 0) + 0);
