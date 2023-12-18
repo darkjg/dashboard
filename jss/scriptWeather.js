@@ -30,9 +30,13 @@ const getClima = async () => {
 }
 
 const templateWeatherIndex = (datos) => {
-
+    let imgCelsius;
     try {
-
+        if(window.location.href=="http://127.0.0.1:5500/index.html"){
+            imgCelsius = "img/celsius.png";
+        }else {
+            imgCelsius = "../img/celsius.png";
+        }
 
         const location = datos[1]["location"];
         const current = datos[1]["current"]
