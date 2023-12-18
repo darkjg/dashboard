@@ -11,8 +11,8 @@ const weatherapi = document.getElementById("wheater");
 const getClima = async () => {
     let datos = []
     try {
-      
-        const response = await fetch("https://api.weatherapi.com/v1/current.json?key="+apikey+"&q="+Lugar+"&aqi=yes ");
+
+        const response = await fetch("https://api.weatherapi.com/v1/current.json?key=" + apikey + "&q=" + Lugar + "&aqi=yes ");
         const response2 = await fetch(`https://api.weatherapi.com/v1/history.json?key=${apikey}&q=${Lugar}&dt=${hoyWheather}`);
         if (!response && !response2) {
             throw new Error("Error");
@@ -29,12 +29,14 @@ const getClima = async () => {
 }
 
 const templateWeatherIndex = (datos) => {
-   
 
-    const location = datos[1]["location"];
-    const current = datos[1]["current"]
-  
-    weatherapi.innerHTML = `<section class="hoy">
+    try {
+
+
+        const location = datos[1]["location"];
+        const current = datos[1]["current"]
+
+        weatherapi.innerHTML = `<section class="hoy">
                                 <div class="datos">
                                         <p>Lugar:${location["name"]}</p>
                                         <p>Region:${location["region"]}</p>
@@ -55,21 +57,23 @@ const templateWeatherIndex = (datos) => {
                                 <div class="lista" id="lista">
                             </div>
                             `;
-    const lista = document.getElementById("lista");
+        const lista = document.getElementById("lista");
 
-    datos[0].forEach(dato => {
-        let fecha = dato["time"];
-        const d = new Date(fecha);
-        let horas = ("0" + d.getHours()).slice(-2);
-        let mins = ("0" + d.getMinutes()).slice(-2);
-        lista.innerHTML += `<div class="datoLista">
+        datos[0].forEach(dato => {
+            let fecha = dato["time"];
+            const d = new Date(fecha);
+            let horas = ("0" + d.getHours()).slice(-2);
+            let mins = ("0" + d.getMinutes()).slice(-2);
+            lista.innerHTML += `<div class="datoLista">
                                 <img src="${dato["condition"]["icon"]}"/>
                                 <p>${horas}:${mins}</p>
                                 <p>${dato["temp_c"]}º</p>        
                             </div>`;
-    });
+        });
 
+    } catch (error) {
 
+    }
 }
 
 //getClima().then((data => templateWeatherIndex(data)))

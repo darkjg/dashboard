@@ -2,6 +2,9 @@ const divenlace = document.getElementById("enlace");
 let arrayEnlaces = [];
 let enlacesGuardados = localStorage.getItem('arrayEnlaces');
 let objetoeliminar;
+
+
+
 function nuevoconjutno(nombre, url, indice) {
     this.nombre = nombre;
     this.url = url;
