@@ -43,7 +43,7 @@ const templateWeatherIndex = (datos) => {
                                 <div class=imagen>
                                     <div class=grande>
                                         <img src="${current["condition"]["icon"]}"
-                                        <p>${current["temp_c"]}<img src="${"../img/celsius.png"}"</p>
+                                        <p>${current["temp_c"]}<img src="${"./img/celsius.png"}"</p>
                                     </div>
                                     <div>
                                         <p>Precipitaciones:${current["precip_mm"]}%</p>
