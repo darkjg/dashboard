@@ -8,6 +8,8 @@ function CambiarImagen(){
     if(window.location.href=="https://darkjg.github.io/dashboard/index.html ||https://darkjg.github.io/dashboard/"){
         console.log("Entro" );
         carpeta = "img/ImagenesAleatorias";
+    }else{
+        carpeta = "../img/ImagenesAleatorias";
     }
     let valorImagen= Math.floor(Math.random() * (arrayImagenes.length - 0) + 0);
     let imagenACambiar=`${carpeta}/${arrayImagenes[valorImagen]}`
