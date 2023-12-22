@@ -1,4 +1,3 @@
-
 .caja {
     border: black solid;
     border-radius: 25px;
@@ -76,7 +75,8 @@ body {
     overflow: auto;
     gap: 2%;
 }
-.datoLista{
+
+.datoLista {
     display: flex;
     align-content: center;
     align-items: center;
@@ -100,8 +100,9 @@ body {
 #horaWidget p {
     font-size: 20px;
 }
-.ocultar{
-     display: none; 
+
+.ocultar {
+    display: none;
 }
 
 /* contraseña */
@@ -119,7 +120,8 @@ body {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    height: 300px;;
+    height: 300px;
+    ;
     padding: 20px;
     overflow: scroll;
     list-style: none;
@@ -130,9 +132,11 @@ a {
     text-decoration: none;
     color: #000;
 }
-#listaDeEnlaces li{
+
+#listaDeEnlaces li {
     height: 55.5px;
 }
+
 li a {
     position: relative;
     display: flex;
@@ -159,7 +163,7 @@ li button {
     border-radius: 50%;
     font-size: 15px;
     background-color: beige;
-    
+
 
 }
 
@@ -182,57 +186,92 @@ li button {
 #introducion {
     font-size: 30px;
 }
+
 #contenedor {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    
+
 }
 
 #contenedor>div {
     width: 48%;
-    
+
 }
+
 /* footer */
-.footer{
-   
+.footer {
+
     position: absolute;
     bottom: 4%;
     right: 0;
     width: 50%;
     border-bottom: black solid 2px;
 }
-nav a{
+
+nav a {
     padding: 2%;
 }
 
-@media (max-width:1500px){
-    body{
+@media (max-width:1500px) {
+    body {
         padding-bottom: 35px;
     }
+
     #contenedor>div {
-      
+
         width: 100%;
     }
-    .enlace{
-        align-items: normal;  
-    }
-    #contenedor{
+
+    #contenedor {
         flex-direction: column;
         width: 95%;
     }
-   .wheater{
-    width: 100%;
-   }
-   .reloj{
-    width: 100%;
-   }
-   .contra {
-    width: 100%;
-   }
-    .footer{
+
+    .wheater {
+        width: 100%;
+    }
+
+    .reloj {
+        width: 100%;
+    }
+
+    .contra {
+        width: 100%;
+    }
+
+    .footer {
         border-bottom-width: 0px;
         bottom: auto;
         height: 0px;
     }
-  }
+}
+
+@media (max-width:480px) {
+    #listaDeEnlaces{
+        padding-left: 75px;
+}
+    
+
+    .enlace input {
+
+        width: 75%;
+    }
+
+    #introducion {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #formenlace {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+
+}
