@@ -152,8 +152,9 @@ nav a {
 
     body {
         padding-bottom: 35px;
-        height: 875.333px;
+        height: 892px;
     }
+   
 
     #contenedor>div {
 
@@ -161,17 +162,20 @@ nav a {
     }
 
     #lista {
-        width: inherit;
+        width: 60%;
     }
 
     #introducion {
         width: 100%;
     }
-
+    .enlace{
+        margin-top: 50px;
+    }
     .enlace input {
         /* width: inherit; */
-        width: 100%;
+        width: 98%;
     }
+
 
     #listaDeEnlaces {
         width: 100%;
@@ -184,7 +188,7 @@ nav a {
 
     .footer {
         border-bottom-width: 0px;
-        bottom: 0px;
+        bottom: 50px;
         height: 0px;
     }
 }
