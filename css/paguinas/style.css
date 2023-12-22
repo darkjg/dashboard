@@ -248,10 +248,10 @@ nav a {
 }
 
 @media (max-width:480px) {
-    #listaDeEnlaces{
+    #listaDeEnlaces {
         padding-left: 75px;
-}
-    
+    }
+
 
     .enlace input {
 
@@ -272,6 +272,11 @@ nav a {
         flex-direction: column;
         width: 100%;
     }
+    #contraseñaGenerada {
+        width: 320px;
+        overflow: auto;
+        padding-left: 25px;
 
+        }
 
 }
