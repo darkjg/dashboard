@@ -205,3 +205,34 @@ li button {
 nav a{
     padding: 2%;
 }
+
+@media (max-width:1500px){
+    body{
+        padding-bottom: 35px;
+    }
+    #contenedor>div {
+      
+        width: 100%;
+    }
+    .enlace{
+        align-items: normal;  
+    }
+    #contenedor{
+        flex-direction: column;
+        width: 95%;
+    }
+   .wheater{
+    width: 100%;
+   }
+   .reloj{
+    width: 100%;
+   }
+   .contra {
+    width: 100%;
+   }
+    .footer{
+        border-bottom-width: 0px;
+        bottom: auto;
+        height: 0px;
+    }
+  }

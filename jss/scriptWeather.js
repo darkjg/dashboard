@@ -84,5 +84,5 @@ const templateWeatherIndex = (datos) => {
     }
 }
 
-//getClima().then((data => templateWeatherIndex(data)))
+
 

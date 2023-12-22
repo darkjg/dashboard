@@ -35,7 +35,9 @@ const submit = document.getElementById("submit");
 submit.addEventListener("click", function () {
     let nombrelink = document.getElementById("nombrelink");
     let linkurl = document.getElementById("linkurl");
-
+   if(linkurl.value.startsWith("www")){
+    linkurl.value="https://"+linkurl.value;
+   }
     if (nombrelink.value != "" && linkurl.value != "") {
         let conjunto = new nuevoconjutno(nombrelink.value, linkurl.value, arrayEnlaces.length + 1);
         arrayEnlaces.push(conjunto);
