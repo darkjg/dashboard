@@ -66,3 +66,9 @@ body {
 nav a {
     padding: 2%;
 }
+@media (max-width:1500px) {
+    body {
+        padding-bottom: 35px;
+        height: 710.333px
+    }
+}

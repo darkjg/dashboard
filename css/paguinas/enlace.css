@@ -3,11 +3,13 @@ header {
     top: 0;
     left: 0;
     text-decoration: none;
-    
+
 }
-body{
+
+body {
     color: white;
 }
+
 header a {
     display: flex;
     text-decoration: none;
@@ -17,20 +19,22 @@ header a {
 header a img {
     width: 10%;
 }
+
 .caja {
     border: black solid;
     border-radius: 25px;
     background-color: rgba(82, 82, 82, 0.5);
     padding: 1%;
     align-items: center;
-  width: 50%;
+    width: 50%;
 }
+
 body {
     background-color: #04293A;
     display: flex;
     flex-direction: column;
     align-content: center;
-  align-items: center;
+    align-items: center;
 }
 
 
@@ -50,7 +54,8 @@ body {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    height: 400px;;
+    height: 400px;
+    ;
     padding: 20px;
     overflow: scroll;
     list-style: none;
@@ -61,9 +66,11 @@ a {
     text-decoration: none;
     color: #000;
 }
-#listaDeEnlaces li{
+
+#listaDeEnlaces li {
     height: 55.5px;
 }
+
 li a {
     position: relative;
     display: flex;
@@ -90,13 +97,13 @@ li button {
     border-radius: 50%;
     font-size: 15px;
     background-color: beige;
-    
+
 
 }
 
 .enlace {
     display: flex;
-   
+
     align-content: center;
     flex-direction: column;
 }
@@ -113,48 +120,69 @@ li button {
 #introducion {
     font-size: 30px;
 }
+
 #contenedor {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    
+
 }
 
 #contenedor>div {
     width: 48%;
-    
+
 }
+
 /* footer */
-.footer{
-   
+.footer {
+
     position: absolute;
     bottom: 4%;
     right: 0;
     width: 50%;
     border-bottom: black solid 2px;
 }
-nav a{
+
+nav a {
     padding: 2%;
 }
 
 
-@media (max-width:1500px){
+@media (max-width:1500px) {
 
-    body{
+    body {
         padding-bottom: 35px;
+        height: 875.333px;
     }
+
     #contenedor>div {
-      
+
         width: 100%;
     }
-   #lista{
-    width: auto;
-   }
-    #contenedor{
+
+    #lista {
+        width: inherit;
+    }
+
+    #introducion {
+        width: 100%;
+    }
+
+    .enlace input {
+        /* width: inherit; */
+        width: 100%;
+    }
+
+    #listaDeEnlaces {
+        width: 100%;
+    }
+
+    #contenedor {
         flex-direction: column;
         width: 95%;
     }
-    .footer{
+
+    .footer {
         border-bottom-width: 0px;
         bottom: 0px;
         height: 0px;
